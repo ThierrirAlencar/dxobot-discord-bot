@@ -1,6 +1,11 @@
-# 🤖 Discord Bot
 
-Um bot para Discord desenvolvido com foco em organização, tipagem forte e escalabilidade, utilizando tecnologias modernas do ecossistema JavaScript.
+<p align="center">
+    <img src="public/logo.png">
+</p>
+
+# 🤖 DXO!
+
+Um bot para Discord desenvolvido com foco em múlti propósito, desenvolvimento em automação, uso geral e comunicação de avisos. 
 
 ---
 
@@ -12,6 +17,7 @@ Este projeto foi construído utilizando:
 - **TypeScript** — tipagem estática
 - **discord.js** — integração com a API do Discord
 - **Prisma** — ORM para banco de dados
+- **Postgresql** — Banco de dados relacional
 - **Zod** — validação de dados segura e tipada
 
 ---
@@ -38,3 +44,4 @@ src/
 ├── database/        # Configuração do Prisma
 ├── utils/           # Funções utilitárias
 └── server.ts         # Entrada principal
+
