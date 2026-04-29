@@ -14,11 +14,9 @@ export const client = new Client({
     rest:rest.options
 })
 
-
-
 try{    
     console.log('Started refreshing application (/) commands.');
-    
+    ''
     const commands = await defineCommands();
     
     await rest.put(Routes.applicationCommands(CLIENT_ID), { body: commands });

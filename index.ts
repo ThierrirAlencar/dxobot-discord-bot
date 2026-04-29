@@ -1,9 +1,7 @@
-import { DISCORD_TOKEN } from "./app/core/env/index.js";
-import { client } from "./app/server.js";
+import { DISCORD_TOKEN } from "./src/core/env/index.js";
+import { client } from "./src/server.js";
 
-try{
-    console.log("Running Bot...")
-    client.login(DISCORD_TOKEN)
-}catch(err){
-    console.error(err)
-}
+
+console.log("Running Bot...")
+client.login(DISCORD_TOKEN)
+
