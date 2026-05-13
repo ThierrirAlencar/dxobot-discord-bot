@@ -16,7 +16,7 @@ export const client = new Client({
 
 try{    
     console.log('Started refreshing application (/) commands.');
-    ''
+    
     const commands = await defineCommands();
     
     await rest.put(Routes.applicationCommands(CLIENT_ID), { body: commands });
@@ -28,7 +28,6 @@ try{
     await clientCheckInteractionEvent(client)
 
     console.log("Successfully reading application (/) commands.")
-
 }catch(err){
     console.log(err)
 }

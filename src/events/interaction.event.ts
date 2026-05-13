@@ -1,17 +1,24 @@
 
-import { Client, Events } from 'discord.js';
+import { Client, DiscordAPIError, Events } from 'discord.js';
 import { defineCommands } from '../core/handleCommands';
 
 export const clientCheckInteractionEvent = async (_client:Client)=> {
     _client.on(Events.InteractionCreate, async interaction=>{
         if(!interaction.isChatInputCommand()){return;}
 
-        const commands = await defineCommands()
+        const command = (await defineCommands()).find(e=>e.name==interaction.commandName)
+        
+        if(!command) return; 
 
-        commands.map(e=>{
-            if(e.name==interaction.commandName && e.handler){
-                e.handler(interaction)
+        try{
+            if(command.handler){
+                command.handler(interaction)
             }
-        })
+        }catch(err){
+            console.error(err)
+            if(err instanceof DiscordAPIError){
+                interaction.reply(`Error While returning. Sorry for our mistake!`)
+            }
+        }
     })
 }
