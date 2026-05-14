@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"tsx --watch index.ts ",
+    "dev": "tsx --watch index.ts ",
     "deploy": "tsx index.ts"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "discord.js": "^14.26.3",
     "dotenv": "^17.4.2",
     "npx": "^3.0.0",
+    "ping-wrapper": "^0.0.3",
     "tsx": "^4.21.0",
     "winston": "^3.19.0",
     "zod": "^4.3.6"
