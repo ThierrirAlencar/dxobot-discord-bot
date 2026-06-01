@@ -1,2 +1,23 @@
-.env
+
+# Keep enviroment variables out of production
+.env 
+.env.dev
+.env.prod
+**.env 
+
+# keep dependendicies out of production
 node_modules
+
+
+# Keep Log files out of production
+**.log
+.log/
+/.log/*
+
+# Keep Temporary files out of production
+**.temp 
+.temp 
+/.temp
+.ignore
+.discard
+.tests
